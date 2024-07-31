@@ -1,15 +1,39 @@
 # python-package-template
 
-## environment
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
+## Development environment
 
 - [macOS 12.6.5](https://www.apple.com/tw/macos/monterey/)
-- [Visual Studio Code 1.77.0](https://code.visualstudio.com/)
-- [Python 3.10.5](https://www.python.org/)
+- [Visual Studio Code 1.85.1](https://code.visualstudio.com/)
+- [Python 3.11.7](https://www.python.org/)
 
-## official tutorial
+## Official tutorial
 
-- [https://packaging.python.org/en/latest/tutorials/packaging-projects/](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+- [Tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
 
-This is a simple example package. You can use
-[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+## Export requirements.txt
+
+```shell
+$ pipenv requirements > requirements.txt
+
+$ pipenv requirements --dev > dev-requirements.txt
+```
+
+## Build package
+
+```shell
+$ python -m build
+```
+
+## Install package from other project
+
+```shell
+$ pip install git+https://github.com/billy0402/python-package-template.git
+
+$ pipenv install git+https://github.com/billy0402/python-package-template.git
+
+$ poetry add git+https://github.com/billy0402/python-package-template.git
+```
