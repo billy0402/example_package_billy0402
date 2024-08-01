@@ -1,29 +1,70 @@
 Metadata-Version: 2.1
-Name: python-package-template
+Name: python_package_template
 Version: 0.0.1
 Summary: A small example package
-Author-email: Example Author <author@example.com>
-Project-URL: Homepage, https://github.com/pypa/sampleproject
-Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Author-email: Billy Huang <10646003@ntub.edu.tw>
+Project-URL: Homepage, https://github.com/billy0402/python-package-template
+Project-URL: Issues, https://github.com/billy0402/python-package-template/issues
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
-Requires-Python: >=3.7
+Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: beautifulsoup4==4.12.3; python_full_version >= "3.6.0"
+Requires-Dist: certifi==2024.7.4; python_version >= "3.6"
+Requires-Dist: charset-normalizer==3.3.2; python_full_version >= "3.7.0"
+Requires-Dist: idna==3.7; python_version >= "3.5"
+Requires-Dist: requests==2.32.3; python_version >= "3.8"
+Requires-Dist: soupsieve==2.5; python_version >= "3.8"
+Requires-Dist: urllib3==2.2.2; python_version >= "3.8"
+Provides-Extra: dev
 
 # python-package-template
 
-## environment
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
+## Development environment
 
 - [macOS 12.6.5](https://www.apple.com/tw/macos/monterey/)
-- [Visual Studio Code 1.77.0](https://code.visualstudio.com/)
-- [Python 3.10.5](https://www.python.org/)
+- [Visual Studio Code 1.85.1](https://code.visualstudio.com/)
+- [Python 3.11.7](https://www.python.org/)
 
-## official tutorial
+## Official tutorial
 
-- [https://packaging.python.org/en/latest/tutorials/packaging-projects/](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+- [Tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
 
-This is a simple example package. You can use
-[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+## Export requirements.txt
+
+```shell
+$ pipenv requirements > requirements.txt
+
+$ pipenv requirements --dev > dev-requirements.txt
+```
+
+## Build package
+
+```shell
+$ python -m build
+```
+
+## Generate type stub files
+
+- [Guide](https://typing.readthedocs.io/en/latest/guides/writing_stubs.html)
+
+```shell
+$ cd src
+$ stubgen -p python_package_template -o typings
+```
+
+## Install package from other project
+
+```shell
+$ pip install git+https://github.com/billy0402/python-package-template.git
+
+$ pipenv install git+https://github.com/billy0402/python-package-template.git
+
+$ poetry add git+https://github.com/billy0402/python-package-template.git
+```

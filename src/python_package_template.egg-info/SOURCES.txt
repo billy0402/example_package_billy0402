@@ -1,9 +1,14 @@
 LICENSE
 README.md
 pyproject.toml
+requirements.txt
 src/python_package_template/__init__.py
 src/python_package_template/example.py
+src/python_package_template/py.typed
 src/python_package_template.egg-info/PKG-INFO
 src/python_package_template.egg-info/SOURCES.txt
 src/python_package_template.egg-info/dependency_links.txt
+src/python_package_template.egg-info/requires.txt
 src/python_package_template.egg-info/top_level.txt
+src/typings/python_package_template/__init__.pyi
+src/typings/python_package_template/example.pyi
