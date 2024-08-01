@@ -28,6 +28,15 @@ $ pipenv requirements --dev > dev-requirements.txt
 $ python -m build
 ```
 
+## Generate type stub files
+
+- [Guide](https://typing.readthedocs.io/en/latest/guides/writing_stubs.html)
+
+```shell
+$ cd src
+$ stubgen -p python_package_template -o typings
+```
+
 ## Install package from other project
 
 ```shell
